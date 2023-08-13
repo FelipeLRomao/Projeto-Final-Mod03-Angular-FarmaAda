@@ -1,0 +1,29 @@
+// FONTES //
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+// variáveis de fontes
+$font-principal: 'Lato', sans-serif;
+$font-segundaria: 'Quicksand', sans-serif;
+$pequena: 12px;
+$media: 16px;
+$grande: 24px;
+$extra-grande: 32px;
+
+
+// Cores
+$vermelho-pastel: #ff0044;
+$vermelho-forte: #ff002b;
+$azul-titulo: rgba(0, 100, 167, 0.933);
+$cor-principal: #1e9bee;
+$verde: #00e21e;
+$branco: #fff;
+$preto: #262626;
+
+// Sobras
+$button-shadow:  1px 2px 5px 3px rgba(0,0,0, 0.20);
+$card-shadow:  1px 8px 10px 3px rgba(0,0,0,0.20);
+$card-shadow-hover:  1px 8px 10px 3px rgba(0,0,0,0.43);
+$transition-shadow: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+

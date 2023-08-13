@@ -1,0 +1,94 @@
+@import "../app.component.scss";
+.container{
+  width: 1540px;
+  display: block;
+  padding-top: 3rem;
+  margin: auto;
+  h1 {
+    padding: 20px;
+    font-family: $font-principal;
+    font-size: $extra-grande;
+    color: $vermelho-pastel;
+  }
+  h2{
+      padding: 20px;
+      font-family: $font-principal;
+      font-size: $grande;
+      color: $vermelho-pastel;
+  }
+    mat-grid-tile{
+      mat-card{
+        background-color: $branco;
+        margin: 10px;
+        border-radius: 5px;
+        box-shadow: $card-shadow;
+        transition: $transition-shadow;
+        cursor: pointer;
+        &:hover{
+          box-shadow: $card-shadow-hover;
+        }
+         img {
+          width: 80%;
+        }
+        mat-card-content{
+          h3{
+            font-family: $font-principal;
+            font-size: $media;
+            font-weight: 600;
+            color: $azul-titulo;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            &:hover{
+              color: $vermelho-forte;
+            }
+          }
+        }
+            ul{
+              padding-top: 0px;
+              padding-left: 0px;
+              padding-bottom: 20px;
+              list-style-type: none;
+            }
+            li{
+              padding: 2px;
+              .lab{
+                font-size: $media;
+                font-weight: 600;
+              }
+        }
+      }
+      mat-card-actions{
+        padding-bottom: 20px;
+         .favorite{
+          width: 40%;
+          background-color: $vermelho-pastel;
+
+        mat-icon{
+        color: #e4e4e4;
+        text-shadow: 1px 1px  2px $preto;
+      }
+        }
+      .favorite-checked{
+        width: 40%;
+        background-color: #e4e4e4;
+        color: $vermelho-pastel;
+        border: 1px solid $vermelho-pastel;
+      }
+        button{
+          display: block;
+          width: 80%;
+          height: 48px;
+          margin-right: 10px;
+          cursor: pointer;
+          background-color: $verde;
+          border: none;
+          border-radius: 10px;
+          &:hover{
+            box-shadow: $button-shadow ;
+          }
+        }
+      }
+    }
+}
+

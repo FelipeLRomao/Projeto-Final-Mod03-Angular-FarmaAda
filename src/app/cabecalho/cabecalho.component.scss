@@ -1,0 +1,30 @@
+@import "../app.component.scss";
+
+mat-toolbar{
+  border-bottom: 4px solid $cor-principal;
+  color: $preto;
+  .container{
+    width: 1140px;
+    display: flex;
+    margin: auto;
+
+  h1{
+    font-family: $font-principal;
+    font-size: $extra-grande;
+    color: $vermelho-pastel;
+    font-weight: 700;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .menu-spacer{
+    flex: 1 1 auto;
+  }
+  button{
+    margin-top: 10px;
+    font-size: $media;
+    &:hover{
+      color: $vermelho-forte;
+    }
+  }
+}
+}

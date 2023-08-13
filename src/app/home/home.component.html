@@ -1,0 +1,78 @@
+<!-- //banner e respectivas imagens do banner -->
+<app-slide
+  [imagens]="[
+  '../../assets/img/wallpaper2.png',
+  '../../assets/img/wallpaper1.png',
+  '../../assets/img/wallpaper3.png'
+]" >
+</app-slide>
+
+  <div class="container">
+    <section id="remedios-favoritos">
+          <h1>Olá  {{ nome }}!</h1> <br>
+            <h2>Confira nossas ofertas em toda a loja!</h2>
+            <mat-grid-list cols="4" rowHeight="3:5">
+              <div *ngFor="let remedio of remedios; let i = index">
+                  <mat-grid-tile *ngIf = "remedio.favorito === true" >
+                    <mat-card>
+                      <img mat-card-image src='{{remedio.foto}}'>
+                      <mat-card-content>
+                        <h3>{{  remedio.titulo }}</h3>
+                        <p>Este medicamento é indicado como analgésico (para dor) e antitérmico (para febre).</p>
+                        <ul>
+                          <li><span class="lab">{{remedio.laboratorio}}</span></li>
+                          <li> {{remedio.quantidade}}</li>
+                          <li> R$ {{remedio.preco}}</li>
+                          <li>Ref: {{remedio.ref}}</li>
+                        </ul>
+                      </mat-card-content>
+                      <mat-card-actions>
+                        <button class="favorite" mat-button (click)="toogleFavorito(i)"> <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon></button>
+                        <button mat-button><mat-icon>shopping_cart</mat-icon></button>
+                  <button mat-button (click)="verDetalhe(remedio.id)"><mat-icon>info</mat-icon></button>
+                      </mat-card-actions>
+                    </mat-card>
+                  </mat-grid-tile>
+              </div>
+              </mat-grid-list>
+    </section>
+
+        <section id="lista-remedios">
+        <h2 class="titulo-home">🏅Produtos em Destaque:</h2>
+        <mat-grid-list cols="4" rowHeight="3:5">
+        <div >
+            <mat-grid-tile *ngFor="let remedio of remedios; let i  = index ">
+              <mat-card>
+                <img mat-card-image src='{{remedio.foto}}'>
+                <mat-card-content>
+                  <h3>{{  remedio.titulo }}</h3>
+                  <p>Este medicamento é indicado como analgésico (para dor) e antitérmico (para febre).</p>
+                  <ul>
+                    <li><span class="lab">{{remedio.laboratorio}}</span></li>
+                    <li> {{remedio.quantidade}}</li>
+                    <li> R$ {{remedio.preco}}</li>
+                    <li>Ref: {{remedio.ref}}</li>
+                  </ul>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button
+                  [class]="remedio.favorito === false ? 'favorite' : 'favorite-checked'"
+                  [title]="remedio.favorito === false ? 'Adicionar aos favoritos' : 'Remover de favoritos'"
+                   mat-button
+                   (click)="toogleFavorito(i)">
+                   <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon>
+                   </button>
+                    <button
+                    [title]="remedio.favorito === false ? 'Adicionar ao Carrinho' : 'Remover do Carrinho'"
+                    mat-button
+                    >
+                    <mat-icon>shopping_cart</mat-icon>
+                    </button>
+                  <button mat-button (click)="verDetalhe(remedio.id)"><mat-icon>info</mat-icon></button>
+                </mat-card-actions>
+              </mat-card>
+            </mat-grid-tile>
+        </div>
+        </mat-grid-list>
+      </section>
+</div>

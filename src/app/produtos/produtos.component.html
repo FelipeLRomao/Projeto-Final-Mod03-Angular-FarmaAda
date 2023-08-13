@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Toda nossa loja com preços promocionais especialmente a você!</h1>
+  <h2 class="produto-lista">Todos os nossos produtos</h2>
+  <mat-grid-list cols="4" rowHeight="3:5">
+    <div *ngFor="let remedio of remedios; let i = index">
+        <mat-grid-tile >
+          <mat-card>
+            <img mat-card-image src='{{remedio.foto}}'>
+            <mat-card-content>
+              <h3>{{  remedio.titulo }}</h3>
+              <p>Este medicamento é indicado como analgésico (para dor) e antitérmico (para febre).</p>
+              <ul>
+                <li><span class="lab">{{remedio.laboratorio}}</span></li>
+                <li> {{remedio.quantidade}}</li>
+                <li> R$ {{remedio.preco}}</li>
+                <li>Ref: {{remedio.ref}}</li>
+              </ul>
+            </mat-card-content>
+            <mat-card-actions>
+
+              <button mat-button><mat-icon>shopping_cart</mat-icon></button>
+        <button mat-button (click)="verDetalhe(remedio.id)"><mat-icon>info</mat-icon></button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+    </div>
+    </mat-grid-list>
+</div>
